@@ -1,0 +1,21 @@
+<div class="counter">
+  <span class="count {{if this.isRed "red"}}">
+    Count: {{this.count}}
+  </span>
+
+  <button
+      class="bt-dec"
+      type="button"
+      {{ on "click" this.decrement }}
+      >
+    Dec
+  </button>
+  <button
+      class="bt-inc"
+      type="button"
+      disabled={{this.isIncDisabled}}
+      {{ on "click" this.increment }}
+      >
+    Inc
+  </button>
+</div>
